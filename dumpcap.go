@@ -26,6 +26,8 @@ var (
 )
 
 func main() {
+	flag.Parse()
+
 	// Open output pcap file and write header 
 	f, _ := os.Create(*file)
 	w := pcapgo.NewWriter(f)
